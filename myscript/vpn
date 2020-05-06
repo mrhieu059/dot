@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -z "$(pacman -Qs nordvpn)" ]
+then
+	echo "VPN " 
+else
+	vpn_Status="$(nordvpn status | head -1 | cut -d ' ' -f6)"
+	if [ "$vpn_Status" = 'Connected' ]
+	then
+		nordvpn status | head -3 | tail -1 | cut -d ' ' -f2- | sed 's/$/ /' || echo "VPN " 
+	else
+		echo "VPN  "
+	fi
+fi
+

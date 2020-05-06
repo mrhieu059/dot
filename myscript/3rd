@@ -1,0 +1,82 @@
+#!/bin/bash
+trap "echo Exited " 2
+#while true
+#do
+#bat=$(echo "$($HOME/myscript/battery)")
+#vol=$(echo "$($HOME/myscript/volume)")
+#vpn=$(echo "$($HOME/myscript/vpn)")
+#lig=$(echo "$($HOME/myscript/light)")
+#upt=$(echo "$($HOME/myscript/uptime)")
+#ssi=$(echo "$($HOME/myscript/ssid)")
+#	echo "$bat $vol $vpn $lig $upt $ssi"
+#	sleep 2s
+#done
+bat(){
+	status="$(cat /sys/class/power_supply/BAT?/status)"
+	battery="$(cat /sys/class/power_supply/BAT?/capacity)"
+
+	[ $status = "Discharging" ] && [ $battery -le 20 ] && 
+	echo "$battery  " || echo "$battery $status" | sed 's/Discharging/ /; s/Charging/ /; s/Full/ /'
+}
+
+vol(){
+	volume=$(pamixer --get-volume)
+	[ $(pamixer --get-mute) = true ] && 
+	echo "$volume  " || 
+	pamixer --get-volume | sed 's/$/  /'
+}
+
+vpn(){
+	if [ -z "$(pacman -Qs nordvpn)" ]
+	then
+		echo "VPN " 
+	else
+		vpn_Status="$(nordvpn status | head -1 | cut -d ' ' -f6)"
+		if [ "$vpn_Status" = 'Connected' ]
+		then
+			nordvpn status | head -3 | tail -1 | cut -d ' ' -f2- | sed 's/$/ /' || echo "VPN " 
+		else
+			echo "VPN  "
+		fi
+	fi
+}
+
+lig(){
+	kbdlight=/sys/class/leds/smc::kbd_backlight/brightness
+	kbdlight_Current=$(cat /sys/class/leds/smc::kbd_backlight/brightness)
+	inc=$(expr $kbdlight_Current + 50)
+	dec=$(expr $kbdlight_Current - 50)
+	#if [ -z $1 ] && [ -f /usr/bin/light ];then
+	#	echo "$kbdlight_Current   $light "
+	#fi
+	#
+	case $1 in
+		"+") echo "$inc" | sudo tee $kbdlight > /dev/null;;
+		"-") echo "$dec" | sudo tee $kbdlight > /dev/null;;
+	esac
+	if [ -f /usr/bin/light ]
+	then
+		light=$(light -G | cut -d '.' -f1)
+		echo "$kbdlight_Current   $light "
+	else
+		echo "$kbdlight_Current  "
+	fi
+}
+
+upt(){
+	#uptime="$(uptime |head -n1| awk '{print $3}' | sed 's/,//; s/$/ /')"
+	user="$(who | head -1 |  awk '{print $1}' | tr '[:lower:]' '[:upper:]')"
+
+	echo "$user  "
+}
+ssi(){
+	iw wlan0 link | grep SSID | cut -d ' ' -f2- | sed 's/$/  /'
+}
+SLEEP=5
+while true
+do
+#	echo "$(vpn)|$(ssi)|$(lig)|$(vol)|$(bat)|$(upt)"
+	echo "[$(vpn)]+<[$(ssi)]+<[$(lig)]+<[$(vol)]+<[$(bat)]+<[$(upt)]"
+	wait &
+	sleep $SLEEP
+done

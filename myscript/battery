@@ -1,0 +1,5 @@
+status="$(cat /sys/class/power_supply/BAT?/status)"
+battery="$(cat /sys/class/power_supply/BAT?/capacity)"
+
+[ $status = "Discharging" ] && [ $battery -le 20 ] && 
+echo "$battery " || echo "$battery $status" | sed 's/Discharging//; s/Charging//; s/Full//'
