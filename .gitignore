@@ -1,1 +1,4 @@
 config/nvim/plugged/
+client.yml
+spotifyd/
+.netrwhist
