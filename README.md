@@ -1,4 +1,4 @@
-# his is the title
+# My personal dotfiles and some mics
 ## this is the header
 ### This is the subheader
     This is the paragraph

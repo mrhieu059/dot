@@ -78,7 +78,7 @@ ssi(){
 	iw wlp3s0 link | grep SSID | cut -d ' ' -f2- | sed 's/$/  /'
 }
 mpd(){
-	mus=$(mpc --format '%artist% : %title%' current | sed 's/\[//; s/\]//')
+	mus=$(mpc --format '%title%' current | cut -c 1-40| sed 's/\[//; s/\]//') 
 	mus_status=$(mpc status | grep playing )
 	[[ -n $mus_status ]] && echo " $mus" || echo " $mus"
 	#echo " $mus "

@@ -1,3 +1,2 @@
 #!/bin/bash
-[[ -z $(pgrep spotifyd) ]] && spotifyd || killall spotifyd && spotifyd;
-spt
+[[ ! $(pgrep spotifyd) ]] && spotifyd || spt

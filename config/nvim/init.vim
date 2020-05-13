@@ -4,6 +4,8 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'romainl/flattened'
 Plug 'vimwiki/vimwiki'
 Plug 'lambdalisue/suda.vim'
+Plug 'ap/vim-css-color' "Highlight RGB color
+Plug 'KabbAmine/vCoolor.vim' "Open a dialog which let me choose RGB colors
 call plug#end()
 
 "------------------------ General Setup --------------------------
@@ -13,7 +15,7 @@ set cursorline "Highlight the line where cursor is
 "colorscheme nord
 set hls is "Making sure search highlights words as we type them
 set number
-set termguicolors
+"set termguicolors
 colorscheme nord
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]

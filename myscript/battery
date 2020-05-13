@@ -1,5 +1,27 @@
-status="$(cat /sys/class/power_supply/BAT?/status)"
-battery="$(cat /sys/class/power_supply/BAT?/capacity)"
+#!/bin/bash
+#status="$(cat /sys/class/power_supply/BAT?/status)"
+#battery="$(cat /sys/class/power_supply/BAT?/capacity)"
+#
+#[ $status = "Discharging" ] && [ $battery -le 20 ] && 
+#echo "$battery " || echo "$battery $status" | sed 's/Discharging//; s/Charging//; s/Full//'
 
-[ $status = "Discharging" ] && [ $battery -le 20 ] && 
-echo "$battery " || echo "$battery $status" | sed 's/Discharging//; s/Charging//; s/Full//'
+bat(){
+	if [ -d "/sys/class/power_supply/BAT?" ];then
+
+		status="$(cat /sys/class/power_supply/BAT?/status)"
+		battery="$(cat /sys/class/power_supply/BAT?/capacity)"
+	else
+		AC=ON
+	#	echo $AC
+	fi
+
+	if [ $AC = "ON" ];then
+		echo "AC" 
+	elif [ $status = "Discharging" -a  $battery -le 20];then
+		echo "$battery  " 
+	else 
+		echo "$battery $status" | sed 's/Discharging/ /; s/Charging/ /; s/Full/ /'
+	fi
+}
+
+echo $(bat)
