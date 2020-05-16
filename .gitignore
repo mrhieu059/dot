@@ -6,3 +6,5 @@ config/joplin/
 config/mpd/mpd.conf
 config/spotify-tui/
 sxhkd/
+config/mpd/database
+.lyrics/
