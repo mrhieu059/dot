@@ -1,0 +1,4 @@
+[Added Associations]
+application/x-bittorrent=transmission_remote.desktop;
+[Default Applications]
+x-scheme-handler/magnet=transmission_remote.desktop;

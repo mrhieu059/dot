@@ -7,7 +7,7 @@ else
 	vpn_Status="$(nordvpn status | grep Connected | xargs | cut -d ' ' -f3)"
 	if [ "$vpn_Status" = 'Connected' ]
 	then
-		nordvpn status | head -3 | tail -1 | cut -d ' ' -f2- | sed 's/$/ /' || echo "VPN " 
+		nordvpn status | grep Country | cut -d ':' -f2- | xargs | sed 's/$/ /' || echo "VPN " 
 	else
 		echo "VPN  "
 	fi

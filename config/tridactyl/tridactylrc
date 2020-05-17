@@ -17,7 +17,6 @@ bind goa open https://www.youtube.com/watch?v=eVtNcCwMY58
 bind gwa winopen https://www.youtube.com/watch?v=eVtNcCwMY58
 bind <A-p> pin
 bind <A-m> mute toggle
-bind <F1> help
 bind o fillcmdline open
 bind O current_url open
 bind w fillcmdline winopen
