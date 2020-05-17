@@ -6,6 +6,7 @@ config/joplin/
 config/spotify-tui/
 sxhkd/
 mpd/!*.*/*
+mpd/*/
 .lyrics/
 *.torrent
 *.resume
