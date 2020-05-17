@@ -5,8 +5,9 @@ spotifyd/
 config/joplin/
 config/spotify-tui/
 sxhkd/
-mpd/!*.*/*
+config/mpd/!*.*
 config/mpd/*/
+config/mpd/*
 .lyrics/
 *.torrent
 *.resume
