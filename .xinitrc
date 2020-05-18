@@ -2,7 +2,7 @@
 dunst &
 picom &
 mpd &
-feh --no-fehbg --bg-scale '/home/cinux/dot/wals/stretched-1366-768-89317.png'
+feh --no-fehbg --bg-scale '/home/cinux/.config/wall.png'
 dwmblocks &
 xinput disable 10
 while true
