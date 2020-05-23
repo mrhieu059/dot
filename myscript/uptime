@@ -1,4 +1,0 @@
-uptime="$(uptime | awk '{print $3}' | sed 's/,//; s/$/ /')"
-user="$(who | head -1 |  awk '{print $1}' | tr '[:lower:]' '[:upper:]')"
-
-echo "$uptime $user"

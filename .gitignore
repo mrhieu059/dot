@@ -4,7 +4,6 @@ spotifyd/
 .netrwhist
 config/joplin/
 config/spotify-tui/
-sxhkd/
 config/mpd/!*.*
 config/mpd/*/
 config/mpd/*
