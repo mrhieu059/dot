@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [[ $(pgrep picom) ]]
+if [ $(pgrep picom) ]
 then
 	pkill picom 
 	dunstify -t 1000 "Turning off Picom"
