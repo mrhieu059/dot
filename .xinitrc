@@ -1,16 +1,9 @@
-#!/bin/sh
 sxhkd &
 dunst &
 picom &
-mpd &
-feh --no-fehbg --bg-scale '/home/cinux/.config/wall.png'
-transmission-daemon &
-#dwmblocks &
-xinput disable 10
+feh --bg-scale ~/.config/wall.png &
+nm-applet &
 polybar custombar &
-redshift -c ~/.config/redshift/redshift.conf &
+nm-applet &
+xinput disable 10
 exec bspwm
-#while true
-#do
-#	ssh-agent dwm 
-#done
