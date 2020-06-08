@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+get='youtube-dl'
+clip="$(xclip -o -sel clipboard)"
+
+notify-send "Downloading $clip" ; $get $clip && notify-send "Finished" || notify-send "Failed to Download"

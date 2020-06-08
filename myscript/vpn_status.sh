@@ -16,8 +16,7 @@ status=$(nmcli con show --active | grep vpn)
 
 if [ $? -eq 0 ]
 then
-	notify-send "VPN already on"
+	echo "ON "
 else
-	notify-send "Turning on VPN"
-	nmcli con up id nordvpn.p2p.jpn
+	echo "OFF "
 fi

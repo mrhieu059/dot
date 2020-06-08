@@ -1,1 +1,2 @@
-transmission-remote -a "$@" ; notify-send "Adding torrent"
+#!/bin/sh
+transmission-remote -a "$@" >~/.trans.log ; notify-send "Adding torrent $@"

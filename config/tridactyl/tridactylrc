@@ -8,7 +8,7 @@ set update.checkintervalsecs 86400
 set theme shydactyl
 
 " Binds
-bind ;d composite get_current_url | yank | exclaim_quiet /usr/local/bin/getmp3
+bind ;d composite get_current_url | yank | exclaim_quiet ~/.local/bin/getmp3
 bind gnj tabopen https://github.com/tridactyl/tridactyl
 bind goj open https://github.com/tridactyl/tridactyl
 bind gwj winopen https://github.com/tridactyl/tridactyl

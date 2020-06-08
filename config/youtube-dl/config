@@ -1,0 +1,5 @@
+-x
+--audio-format best
+--audio-quality 0
+--add-metadata
+-o ~/.local/music/%(title)s.%(ext)s

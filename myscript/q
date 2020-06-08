@@ -1,0 +1,500 @@
+   11  python--version
+   12  python--help
+   13  man python
+   14  python -V
+   15  mpv --input-ipc-server --idle
+   16  mpv --input-ipc-server=/tmp/mpvsocket --idle
+   17  mpv --input-ipc-server=/tmp/mpvsocket --idle &
+   18  mpv --input-ipc-server=/tmp/mpvsocket --idle 
+   19  pkill mpv
+   20  pgrep mpv
+   21  mpv --input-ipc-server=/tmp/mpvsocket --idle 
+   22  pgrep mpv
+   23  pidof mpv
+   24  pidof mpv-remote-app
+   25  pgrep mpv
+   26  mpv --input-ipc-server=/tmp/mpvsocket --idle &
+   27  mpv --input-ipc-server=/tmp/mpvsocket --idle
+   28  alias mpv-ipc='mpv --input-ipc-server=/tmp/mpvsocket --idle' >> ~/.bashrc 
+   29  sudo sv start vpn
+   30  transmission-daemon 
+   31  xbs picom
+   32  cd /usr/share/fonts/
+   33  ls
+   34  cd OTF/
+   35  ls
+   36  ls
+   37  cd ../TTF/
+   38  ls
+   39  fc-list
+   40  fc-list 
+   41  fc-list | grep -i fira
+   42  ncmpcpp
+   43  cd .local/src/dwm
+   44  sudo make install
+   45  sudo make install
+   46  sudo make install
+   47  sudo make install
+   48  sudo make install
+   49  sudo make install
+   50  sudo make install
+   51  sudo make install
+   52  sudo make install
+   53  sudo make install
+   54  sudo make install
+   55  sudo make install
+   56  sudo make install
+   57  sudo make install
+   58  sudo make install
+   59  sudo make install
+   60  sudo make install
+   61  ls
+   62  sudo make install
+   63  sudo fdisk -l
+   64  nvim ~/.config/dunst/dunstrc 
+   65  free
+   66  free -h
+   67  free -m
+   68  man free
+   69  free -ghw
+   70  free -ghw
+   71  df
+   72  df -s
+   73  df -h
+   74  df -hg
+   75  df -hw
+   76  df -h
+   77  sudo fdisk -l
+   78  lsmem 
+   79  lscpu
+   80  lsipc
+   81  lsinitrd 
+   82  lslogins 
+   83  lsns 
+   84  sudo fdisk -l
+   85  cat /sys/block/sda/queue/rotational 
+   86  lsblk -d -o name,rota
+   87  lsblk -d -o name
+   88  lsblk -d -o
+   89  lsblk -d
+   90  lsblk -d -o type
+   91  lsblk -d type
+   92  picom &
+   93  ls
+   94  pgrep picom
+   95  pgrep picom
+   96  nvim ~/.config/picom/picom.conf
+   97  nvim ~/.config/picom.c
+   98  nvim ~/.config/picom.conf
+   99  nvim ~/.config/picom/picom.conf
+  100  pgrep pico
+  101  nvim ~/.config/picom/picom.conf
+  102  cd ~/.config/picom
+  103  ls
+  104  mv picom.conf.bak picom.conf
+  105  ls
+  106  printenv 
+  107  env
+  108  printenv pager
+  109  printenv PAGER
+  110  tenv PAGER
+  111  env PAGER
+  112  man -k print
+  113  man -k env
+  114  man -k enviro
+  115  printenv TERMINAL
+  116  printenv terminal
+  117  printenv -
+  118  printenv -h
+  119  printenv --help
+  120  echo $PAGER
+  121  man picom
+  122  cd ~/Downloads/
+  123  nvim picom.sample.conf 
+  124  nvim picom.sample.conf 
+  125  cd ~/.config/picom
+  126  mv picom.conf picom.conf.bak
+  127  mv ~/Downloads/picom.sample.conf .
+  128  ls
+  129  mv picom.sample.conf picom.conf
+  130  pkill picom
+  131  man picom
+  132  xbi redshift
+  133  man redshift
+  134  redshift -c ~/.config/redshift/redshift.conf 
+  135  mpv
+  136  man mpv
+  137  ls
+  138  cd ~/.local/tors/complete/
+  139  ls
+  140  cd Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\]/
+  141  ls
+  142  mpv --input-ipc-server \[Doki\]\ Clannad\ -\ 13\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[F9293611\].mkv 
+  143  mpv --input-ipc-server=  \[Doki\]\ Clannad\ -\ 13\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[F9293611\].mkv 
+  144  mpv --input-ipc-server= /tmp/mpv-socket \[Doki\]\ Clannad\ -\ 13\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[F9293611\].mkv 
+  145  mpv --input-ipc-server= /tmp/mpv-socket *
+  146  pkill transmission-daemon
+  147  sudo sv stop vpn
+  148  nmcli c down nord*
+  149  nmcli c down nordvpn.p2p.jpn
+  150  ip a
+  151  mpv --input-ipc-server= /tmp/mpv-socket
+  152  mpv --input-ipc-server= /tmp/mpv-socket *
+  153  mpv-remote-app --hep
+  154  mpv-remote-app --help
+  155  mpv-remote-app -r $HOME --hidden true -p 5950
+  156  mpv-remote-app -r $HOME --hidden true -p 5950 mrhieu59
+  157  mpv-remote-app -r $HOME --hidden true -p 5950 -password mrhieu59
+  158  mpv-remote-app -r $HOME --hidden true -p 5950 --password mrhieu59
+  159  man mpv-remote-app
+  160  mpv-remote-app --help
+  161  mpv-remote-app mrhieu59 -r $HOME --hidden true -p 5950
+  162  mpv-remote-app mrhieu59 -r $HOME --hidden -p 5950
+  163  mpv-remote-app mrhieu59 -r $HOME --hidden - truep 5950 -f
+  164  mpv-remote-app mrhieu59 -r $HOME --hidden - truep 5950 -f=
+  165  mpv-remote-app mrhieu59 -r $HOME --hidde true -p 5950 -f=
+  166  mpv-remote-app mrhieu59 -r $HOME --hidden true -p 5950 -f=
+  167  mpv-remote-app mrhieu59 -r $HOME -p 5950 -f=
+  168  mpv-remote-app mrhieu59 -r $HOME -p 5950 -f mkv
+  169  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv
+  170  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -s
+  171  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -v
+  172  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -v
+  173  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -v
+  174  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -v --help
+  175  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -v -s input-ipc-server
+  176  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -v -s input-ipc-server
+  177  sudo mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -v -s input-ipc-server
+  178  mpv-remote-app mrhieu59 -r $HOME/.local/ -p 5950 -f mkv -v
+  179  mpv-remote-app mrhieu59 -r
+  180  mpv-remote-app mrhieu59 -r $HOME/.local
+  181  mpv-remote-app mrhieu59 -r $HOME/.local -v
+  182  mpv-remote-app mrhieu59 -r $HOME/.local -v
+  183  mpv-remote-app mrhieu59 -r $HOME/.local --no-hidden
+  184  mpv-remote-app mrhieu59 -r $HOME/.local --show-hidden
+  185  mpv-remote-app mrhieu59 -r $HOME/.local --hidden -f mkv,mp4
+  186  alias mpv-remote='mpv-remote-app mrhieu59 -r $HOME/.local --hidden -f mkv,mp4'
+  187  echo alias mpv-remote='mpv-remote-app mrhieu59 -r $HOME/.local --hidden -f mkv,mp4'>> ~/.bashrc 
+  188  cd ~/.local/src/dwm
+  189  ls
+  190  nvim config.h 
+  191  sudo make install
+  192  nvim config.h 
+  193  sudo make install
+  194  fc-list 
+  195  nvim config.h 
+  196  sudo make install
+  197  nvim config.h 
+  198  sudo make install
+  199  nvim config.h ~
+  200  sudo make install
+  201  nvim config.h ~
+  202  sudo make install
+  203  nvim config.h ~
+  204  nvim config.h
+  205  nvim config.h
+  206  sudo make install
+  207  nvim config.h
+  208  sudo make install
+  209  nvim config.h
+  210  sudo make install
+  211  nvim config.h 
+  212  sudo make install
+  213  nvim config.h 
+  214  sudo make install
+  215  nvim config.h 
+  216  sudo make install
+  217  nvim config.h 
+  218  pgrep 1
+  219  pidof 1
+  220  pgrep init
+  221  pidof init
+  222  cd ~/.local/tors/complete/
+  223  ls
+  224  cd Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\]/
+  225  ls
+  226  source ~/.bashrc 
+  227  nvim ~/.config/bashr
+  228  nvim ~/.bashrc 
+  229  source ~/.bashrc 
+  230  mpv-remote 
+  231  nvim ~/.bashrc 
+  232  mpv-remote 
+  233  source ~/.bashrc 
+  234  mpv-remote 
+  235  alias 
+  236  nvim ~/.bashrc 
+  237  source ~/.bashrc 
+  238  mpv-ipc 
+  239  nvim ~/.bashrc 
+  240  nvim ~/.bashrc 
+  241  source ~/.bashrc 
+  242  mpv-ipc 
+  243  mpv-ipc 
+  244  cd .local/tors/complete/
+  245  cd Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\]/
+  246  ls
+  247  mpv .
+  248  mpv . &
+  249  xprop
+  250  xprop
+  251  ncmpcpp
+  252  cd ~/.local/tors/complete/
+  253  ls
+  254  mv Bryde\ -\ The\ Volume\ of\ Things\ \(2020\)\ \(24\ bit\)/ Lady\ Gaga\ -\ Chromatica\ \[Deluxe\ Edition\]\ \(2020\)\ MP3/ Saint\ Etienne\ -\ 2009\ -\ Foxbase\ Alpha\ \(Deluxe\ Edition\)\ 2CD/ Someday\ Jacob\ -\ Oxygen\ Will\ Flow\ \(2020\)/ Sweet\ Spirit\ -\ 2020\ -\ Trinidad/ ~/.local/music/
+  255  ls
+  256  cd ..
+  257  ls
+  258  cd ..
+  259  cd music/
+  260  ls
+  261  ncmpcpp
+  262  ncmpcpp
+  263  ncmpcpp
+  264  ncmpcpp
+  265  st -h
+  266  man st
+  267  man st
+  268  st
+  269  which st
+  270  ls /usr/bin/st
+  271  ls /usr/share/bin/st
+  272  ls /usr/local/bin/st
+  273  st -h
+  274  st -h
+  275  xprop 
+  276  st -n music -c st -t music
+  277  st -n music -c st -t ncmpcpp -e ncmpcpp
+  278  st -n music -c st -t ncmpcpp
+  279  st -n music -c st -t ncmpcpp -e ncmpcpp
+  280  st -n music -c st -t ncmpcpp -e ncmpcpp
+  281  cd .local/
+  282  mkdir movies
+  283  cd movies/
+  284  mv ../tors/complete/* ../movies/
+  285  ls
+  286  ls
+  287  cd Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\]/
+  288  mpv .
+  289  xprop.sh 
+  290  mpv ~/.local/movies/
+  291  xprop 
+  292  xprop
+  293  xprop 
+  294  xev
+  295  showkey 
+  296  showkey -s
+  297  sudo showkey -s
+  298  xmodmap -pke | grep alt
+  299  xmodmap -pke | grep -i alt
+  300  xprop | awk '
+  301  /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
+  302  /^WM_NAME/{sub(/.* =/, "title:"); print}'
+  303  xprop | awk '
+  304  /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
+  305  /^WM_NAME/{sub(/.* =/, "title:"); print}'
+  306  xprop | awk '
+  307  /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
+  308  /^WM_NAME/{sub(/.* =/, "title:"); print}'
+  309  echo "xprop | awk '
+  310  /^WM_CLASS/{sub(/.* =/, "instance:"); sub(/,/, "\nclass:"); print}
+  311  /^WM_NAME/{sub(/.* =/, "title:"); print}'" > xprop.sh
+  312  chmod +x xprop.sh 
+  313  nvim xprop.sh 
+  314  ./xprop.sh 
+  315  nvim xprop.sh 
+  316  ./xprop.sh 
+  317  nvim xprop.sh 
+  318  ./xprop.sh 
+  319  mv xprop.sh ~/.local/bin/
+  320  xprop.sh
+  321  xmodmap 
+  322  xmodmap -pke
+  323  xmodmap -pke | grep -i alt
+  324  xmodmap -pke | grep -i mod
+  325  xmodmap -pke | grep -i mod1
+  326  xmodmap | grep -i mod1
+  327  history 
+  328  st -c st -n lf -t movies -e lf ~/.local/movies/
+  329  cd .local/src/dwm
+  330  ls
+  331  mv ~/Downloads/dwm-pertag-6.2.diff ./patches/
+  332  patch < patches/dwm-pertag-6.2.diff 
+  333  sudo make install
+  334  nvim ~/.config/h
+  335  nvim config.h 
+  336  sudo make install
+  337  nvim config.h 
+  338  sudo make install
+  339  nvim config.h 
+  340  sudo make install
+  341  lf
+  342  xbs lf
+  343  xbi lf
+  344  lf
+  345  lf ~/.local/movies
+  346  nvim config.h 
+  347  sudo make install
+  348  nvim config.h 
+  349  sudo make install
+  350  nvim config.h 
+  351  sudo make install
+  352  nvim config.h 
+  353  sudo make install
+  354  man lf
+  355  nvim ~/.config/lf/pv.sh
+  356  lf
+  357  lf
+  358  lf
+  359  cd ~/.local/dwm
+  360  cd ~/.local/src/dwm
+  361  nvim config.h 
+  362  sudo make install
+  363  man lf
+  364  cd ~/dot/
+  365  ls
+  366  git status
+  367  mkdir config/lf
+  368  cd config/lf/
+  369  nvim lfrc
+  370  lf
+  371  lf
+  372  ls
+  373  cd ..
+  374  ls
+  375  cd lf/
+  376  ls
+  377  touch pv.sh
+  378  chmod +x pv.sh
+  379  cd ..
+  380  ls
+  381  ln -s ~/dot/config/lf/ ~/.config/
+  382  lf
+  383  cd ~/.local/movies/
+  384  ls
+  385  cd Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\]/
+  386  file \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  387  man file
+  388  file -b \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  389  file -b \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  390  file -b \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  391  file -m \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  392  file -i \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  393  file -ib \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  394  file -b \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  395  man file
+  396  man file
+  397  cd .local/src/dwm
+  398  nvim config.
+  399  nvim config.h
+  400  sudo make install
+  401  nvim config.h
+  402  sudo make install
+  403  nvim config.h
+  404  nvim config.h
+  405  sudo make install
+  406  nvim config.h
+  407  sudo make install
+  408  nvim mozilla.pdf 
+  409  xbi zathura
+  410  xbs zathura
+  411  xbi zathura-pdf
+  412  xbi zathura-pdf-popler
+  413  xbi zathura-pdf-poppler
+  414  xbi zathura-pdf-mupdf
+  415  xbi zathura
+  416  zathura mozilla.pdf 
+  417  xbi zathura-pdf-mupdf
+  418  xbi zathura-pdf-poppler
+  419  zathura mozilla.pdf 
+  420  xclip -o 
+  421  xclip -o -sel pri
+  422  xclip -o -sel clip
+  423  xclip -o -sel clipboard
+  424  xclip -o -sel pri
+  425  xbr -R zathura
+  426  sudo xbr -R zathura
+  427  su
+  428  sudo xbps-remove -R zathura
+  429  sudo xbps-remove -R zathura
+  430  sudo xbps-remove -R zathura
+  431  sudo xbps-remove -R zathura
+  432  sudo xbps-remove -Rf zathura
+  433  sudo xbps-remove -RF zathura
+  434  xbps-remove -h
+  435  sudo xbps-remove -RFf zathura
+  436  sudo xbps-remove -f zathura
+  437  sudo xbps-remove -R zathura zathura-pdf-poppler
+  438  sudo xbps-remove -RoO zathura zathura-pdf-poppler
+  439  cd .local/tors/dw
+  440  cd .local/src/dwm
+  441  nvim config.
+  442  nvim config.h
+  443  sudo make install
+  444  man lf
+  445  man lf
+  446  man lf
+  447  cd ~/.local/dwm
+  448  cd ~/.local/src/dwm
+  449  nvim config.h 
+  450  sudo make install
+  451  cd ~/.local/movies/
+  452  ls
+  453  cd Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\]/
+  454  ls
+  455  file --mime-type \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  456  xdg-open \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  457  xbs xdg
+  458  xbi xdg-utils
+  459  xdg-open \[Doki\]\ Clannad\ -\ 01\ \(1920x1080\ Hi10P\ BD\ FLAC\)\ \[4A6B18D8\].mkv 
+  460  help lf
+  461  lf -h
+  462  lf -doc
+  463  lf -doc | less
+  464  lf -doc | less
+  465  echo $TERMINAL
+  466  printev
+  467  printenv
+  468  echo $EDITOR
+  469  man mpv
+  470  cd ~/.local/movies/
+  471  ls
+  472  cd Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\]/
+  473  ls
+  474  mpv --playlist Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\].txt 
+  475  man mpv
+  476  mpv Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\].txt 
+  477  nvim Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\].txt 
+  478  ls 
+  479  ls *mkv
+  480  ls ./*mkv
+  481  ls ./*mkv >> playlist.txt
+  482  mpv playlist.txt 
+  483  nvim playlist.txt 
+  484  mv playlist.txt playlist.m3u
+  485  mpv playlist.m3u 
+  486  mpv playlist.m3u --playlist
+  487  mpv --playlist playlist.m3u 
+  488  mpv --playlist= playlist.m3u 
+  489  mpv --playlist= ./playlist.m3u 
+  490  mpv --playlist="playlist.m3u"
+  491  mpv --playlist="playlist.m3u"
+  492  lf -doc | grep -l fx
+  493  lf -doc | grep -i fx
+  494  nvim ~/.config/lf/lfrc 
+  495  lf
+  496  nvim ~/.config/lf/lfrc 
+  497  lf
+  498  mpv --playlist
+  499  mpv --playlist ~/.localsl/movies/Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\]/Clannad\ \(2007\)\ \[Doki\]\[1920x1080\ Hi10P\ BD\ FLAC\].txt 
+  500  mpv ~/.local/movies/\[bonkai77\]\ Anohana\ -\ The\ Flower\ We\ Saw\ That\ Day\ \[BD-1080p\]\ \[DUAL-AUDIO\]\ \[x265\]\ \[HEVC\]\ \[AAC\]\ \[10bit\]\ \{FILTERED\}\ v2/mylist.m3u 
+  501  mpv-ipc & ; mpv-remote &
+  502  mpv-ipc  ; mpv-remote 
+  503  pgrep mpv
+  504  mpv-ipc & && mpv-remote &
+  505  nvim $(which mpv-ipc)
+  506  nvim $(which mpv-ipc)
+  507  cd .local/bin
+  508  ls
+  509  history 
+  510  history  | less

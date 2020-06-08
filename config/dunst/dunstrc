@@ -1,5 +1,5 @@
 [global]
-    font = Ubuntu 10
+    font = Fira Code 8
 
     # Allow a small subset of html markup in notifications and formats:
     #   <b>bold</b>

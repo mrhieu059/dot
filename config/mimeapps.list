@@ -1,4 +1,4 @@
 [Added Associations]
-application/x-bittorrent=transmission_remote.desktop;
+application/x-bittorrent=xtorrent.desktop;
 [Default Applications]
-x-scheme-handler/magnet=transmission_remote.desktop;
+x-scheme-handler/magnet=xtorrent.desktop;
