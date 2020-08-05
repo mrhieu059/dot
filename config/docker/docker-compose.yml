@@ -1,0 +1,47 @@
+version: "3"
+services:
+  nordvpn:
+    image: bubuntux/nordvpn
+    container_name: nordvpn
+    network_mode: bridge        # Required
+    cap_add:
+      - NET_ADMIN               # Required
+      - SYS_MODULE              # Required for TECHNOLOGY=NordLynx
+        #sysctls:
+    devices:
+      - /dev/net/tun            # Required
+    environment:                # Review https://github.com/bubuntux/nordvpn#environment-variables
+      - USER=mrhieu059@gmail.com     # Required
+      - PASS=n6av76wY37NMSW4AkmcR
+      - CONNECT=-g p2p se
+      - TECHNOLOGY=OpenVPN
+      - NETWORK=10.0.0.0/24 
+    ports:
+      - 8080:8080
+      - 9091:9091
+
+  transmission:
+    image: linuxserver/transmission
+    container_name: torrent
+    network_mode: service:nordvpn
+    depends_on:
+            - nordvpn
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Kentucky/Louisville
+      - USER=cinux #optional
+      - PASS=what #optional
+    volumes:
+      - /home/cinux/.local/tors:/config
+      - /home/cinux/.local/tors/downloads:/downloads
+      - /home/cinux/.local/tors/watch:/watch
+    restart: unless-stopped
+        #torrent:
+        #  image: linuxserver/qbittorrent
+        #  network_mode: service:vpn
+        #  depends_on:
+        #    - vpn
+      
+# The torrent service would be available at https://localhost:8080/ or anywhere inside the local network http://192.168.1.xxx:8080
+

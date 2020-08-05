@@ -12,10 +12,13 @@ bat(){
 
 	if [[ $AC = "ON" ]];then
 		echo "AC" 
+	elif [ $status = "Discharging" -a  $battery -le 3 ];then
+		echo Critical
+		loginctl hibernate
 	elif [ $status = "Discharging" -a  $battery -le 20 ];then
-		echo "$battery  " 
+		echo "$battery  " 
 	else 
-		echo "$battery $status" | sed 's/Discharging/ /; s/Charging/ /; s/Full/ /; s/Unknown//'
+		echo "$battery $status" | sed 's/Discharging/ /; s/Charging/ /; s/Full/ /; s/Unknown//'
 	fi
 }
 

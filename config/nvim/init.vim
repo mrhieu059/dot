@@ -14,7 +14,7 @@ syntax on
 set cursorline "Highlight the line where cursor is 
 "colorscheme nord
 set hls is "Making sure search highlights words as we type them
-set number
+set relativenumber
 "set termguicolors
 colorscheme nord
 let g:vimwiki_list = [{'path': '~/vimwiki/',
