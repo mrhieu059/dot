@@ -18,15 +18,15 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/custombar]
-width = 80%
+width = 85%
 height = 24
 offset-x = 140
 offset-y = 1%
 radius = 9 
 fixed-center = true
 
-;background = #3B4252
-background = #00ffffff
+background = #3B4252
+;background = #00ffffff
 foreground = ${colors.foreground}
 
 line-size = 1
@@ -38,16 +38,16 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Azonix:style=:Regular:pixelsize=12;3
 ;font-0 = Fira Code SemiBold:style=:SemiBold:pixelsize=12;3
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
-font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
-font-4 = Azonix:style=:Regular:pixelsize=9;8
+font-0 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+font-2 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
+font-3 = "Spleen:style=Regular:pixelsize=18;2"
+font-4 = "DejaVu Sans Mono:style=Book:pixelsize=10;6:antialias=true"
 
-modules-left = bspwm vpnstatus  
+modules-left = bspwm  
 modules-center = xwindow 
-modules-right = torupdo light volume battery 
+modules-right = volume light battery
 tray-position = left 
 ;tray-scale = 1
 ;tray-padding = 1
@@ -55,36 +55,40 @@ wm-restack = bspwm
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/vpnstatus]
-type = custom/script
-exec = $HOME/.local/bin/vpn_status.sh
-label-font = 5
-format-overline = #fff
-format-foreground = #f99
-click-left = $HOME/.local/bin/launch_vpn.sh
+;[module/vpnstatus]
+;type = custom/script
+;exec = $HOME/.local/myscript/vpn_status.sh
+;label-font = 5
+;format-overline = #fff
+;format-foreground = #f99
+;click-left = $HOME/.local/myscript/launch_vpn.sh
 
 [module/light]
 type = custom/script
-exec = $HOME/.local/bin/light.sh
+exec = $HOME/.local/myscript/light.sh
+label-font = 4
 
 [module/volume]
 type = custom/script
-exec = $HOME/.local/bin/volume.sh
+exec = $HOME/.local/myscript/soundcard.sh
+label-font = 4
 
-[module/torupdo]
-type = custom/script
-exec = $HOME/.local/bin/torupdo.sh
-interval = 5
-click-left =/usr/bin/alacritty -e transmission-remote-cli &
-label-font = 5
-format-foreground=#777
+;[module/torupdo]
+;type = custom/script
+;exec = $HOME/.local/myscript/torupdo.sh
+;interval = 5
+;click-left =/usr/myscript/alacritty -e transmission-remote-cli &
+;label-font = 5
+;format-foreground=#777
 
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:35:...%
+;label-font = 1
 label-font = 5
-format-foreground = #4c566a
+;format-foreground = #4c566a
+format-foreground = #ffffff
 
 [module/bspwm]
 type = internal/bspwm
@@ -92,7 +96,11 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;...
+ws-icon-4 = 5;V
+ws-icon-5 = 6;VI
+ws-icon-6 = 7;VII
+ws-icon-7 = 8;VIII
+ws-icon-8 = 9;IX
 
 label-focused = %icon%
 label-focused-background = #434c5e
@@ -113,8 +121,9 @@ label-empty-margin-left = 1
 
 [module/battery]
 type = custom/script
-exec = $HOME/.local/bin/battery.sh
-format-prefix-background = #fff
+exec = $HOME/.local/myscript/battery.sh
+;format-prefix-background = #fff
+label-font = 4
 
 [settings]
 screenchange-reload = true

@@ -14,7 +14,7 @@ bat(){
 		echo "AC" 
 	elif [ $status = "Discharging" -a  $battery -le 3 ];then
 		echo Critical
-		loginctl hibernate
+		sudo zzz
 	elif [ $status = "Discharging" -a  $battery -le 20 ];then
 		echo "$battery  " 
 	else 

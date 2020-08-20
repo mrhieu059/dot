@@ -1,14 +1,14 @@
 super + Return
-	alacritty
+	st
 super + p
 	dmenu_run
 super + Escape
 	pkill -USR1 -x sxhkd
 #------------------------CustomKey--------------------------
 XF86Audio{Lower,Raise}Volume
-	pamixer -{d,i} 5;kill -RTMIN+10 $(pidof dwmblocks)
+	$HOME/.local/myscript/volume.sh {-,+}
 XF86AudioMute
-	pamixer -t
+	$HOME/.local/myscript/volume.sh mute
 XF86MonBrightness{Down,Up}
 	light -{U,A} 3
 

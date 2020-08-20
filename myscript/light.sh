@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-if [ -e /usr/local/bin/light ]
+if [ -e /usr/bin/light ]
 then
 	light=$(light -G | cut -d '.' -f1)
 	echo "$light "
