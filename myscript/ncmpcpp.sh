@@ -1,8 +1,9 @@
-#!/bin/bash
-
-if [[ -z $(pidof ncmpcpp) ]]
+#!/bin/sh
+if pgrep -x mpd
 then
-	alacritty --class "music" -t "ncmpcpp" -e ncmpcpp ; notify-send -t 1000 "Turning on NCMCPP"
+	ncmpcpp
 else
-	dunstify -t 1000 "NCMCPP Already Running"
-fi
+	dunstify "Starting MPD"
+	mpd
+	ncmpcpp
+fi;

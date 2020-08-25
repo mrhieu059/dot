@@ -12,8 +12,8 @@ bat(){
 
 	if [[ $AC = "ON" ]];then
 		echo "AC" 
-	elif [ $status = "Discharging" -a  $battery -le 3 ];then
-		echo Critical
+	elif [ $status = "Discharging" -a  $battery -le 5 ];then
+		echo 'Critical'
 		sudo zzz
 	elif [ $status = "Discharging" -a  $battery -le 20 ];then
 		echo "$battery  " 
