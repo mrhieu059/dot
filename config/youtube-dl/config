@@ -1,5 +1,4 @@
 -x
---audio-format best
+--audio-format mp3
 --audio-quality 0
---add-metadata
 -o ~/.local/media/music/%(title)s.%(ext)s

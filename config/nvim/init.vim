@@ -1,6 +1,7 @@
 "------------------------ Vim Plug--------------------------
 call plug#begin()
 Plug 'arcticicestudio/nord-vim'
+Plug 'mhartington/oceanic-next'
 Plug 'romainl/flattened'
 Plug 'vimwiki/vimwiki'
 Plug 'lambdalisue/suda.vim'
@@ -14,9 +15,14 @@ syntax on
 set cursorline "Highlight the line where cursor is 
 "colorscheme nord
 set hls is "Making sure search highlights words as we type them
-set relativenumber
-"set termguicolors
-colorscheme nord
+set number relativenumber
+if (has("termguicolors"))
+ set termguicolors
+endif
+colorscheme OceanicNext
+"Custome key
+nnoremap <silent> <F5> :w !./%<CR>
+"Plugin Configurate
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
