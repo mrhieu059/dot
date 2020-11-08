@@ -5,14 +5,15 @@ mpd_music_dir = "~/.local/music"
 mpd_connection_timeout = "5"
 mpd_crossfade_time = "1"
 
-# Visualizer
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "FIFO"
-visualizer_sync_interval = "30"
-visualizer_in_stereo = "yes"
-visualizer_type = "wave_filled"
-visualizer_color = 246,245,244,243,242,241,240,239,238,237,236,235
-visualizer_look = "|○"
+## Visualizer
+##visualizer_fifo_path = "/tmp/mpd.fifo"
+#visualizer_output_name = "my_fifo"
+#visualizer_sync_interval = "30" 
+#visualizer_in_stereo = "yes"
+#visualizer_type = "spectrum"
+#visualizer_look = "+|"
+
+
 
 #Custom config
 execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
