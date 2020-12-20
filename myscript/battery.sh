@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 bat(){
 	if [ -d '/sys/class/power_supply/BAT0' ];then
@@ -12,9 +12,9 @@ bat(){
 
 	if [[ $AC = "ON" ]];then
 		echo "AC" 
-	elif [ $status = "Discharging" -a  $battery -le 5 ];then
+	elif [ $status = "Discharging" -a  $battery -le 10 ];then
 		echo 'Critical'
-		sudo zzz
+		loginctl suspend
 	elif [ $status = "Discharging" -a  $battery -le 20 ];then
 		echo "$battery  " 
 	else 

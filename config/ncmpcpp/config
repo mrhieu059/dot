@@ -16,4 +16,4 @@ mpd_crossfade_time = "1"
 
 
 #Custom config
-execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
+execute_on_song_change = notify-send "$(mpc --format '[%title%|%file%] \n%artist% - %album%' current)"

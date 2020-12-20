@@ -1,10 +1,10 @@
 #!/bin/sh
-if pgrep -x musicpd
+if pgrep -x mpd
 then
 	ncmpcpp
 else
 	dunstify "Starting MPD"
-	musicpd
+	mpd
 	mpc add /
 	ncmpcpp
 

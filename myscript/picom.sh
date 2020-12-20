@@ -1,9 +1,9 @@
 #!/bin/sh
 
-if [ $(pgrep picom) ]
+if pgrep -x picom
 then
-	pkill picom 
-	dunstify -t 1000 "Turning off Picom"
+	pkill picom &
+	notify-send -t 1000 "Turning off Picom"
 else
 	picom & 
 	notify-send -t 1000 "Turning on Picom"

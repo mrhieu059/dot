@@ -16,7 +16,7 @@
     ignore_newline = no
     #   
     #   [{width}]x{height}[+/-{x}+/-{y}]
-    geometry = "500x5-0+20"
+    geometry = "1500x1500-20+20"
 
     shrink = yes
 

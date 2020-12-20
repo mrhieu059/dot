@@ -1,4 +1,63 @@
-set previewer ~/.config/lf/pv.sh
-map i $~/.config/lf/pv.sh $f | less -R
-map \\ml %for x in "$fx"; do echo "$x" > ./mylist.m3u; done
-map \\pl %mpv ./mylist.m3u
+#set previewer ~/.config/lf/pv.sh
+map gh cd ~/
+map gc cd ~/.config/
+map gd cd ~/.local/dot/
+map gs cd ~/.local/src/
+
+
+# y (select for copy) and P to paste soft-link
+# d (select for cut) and P to paste hard-link
+cmd Link %{{
+    for file in $(lf -remote 'load'); do
+        if [ ! -n "${mode+1}" ]; then
+            mode="$file"
+            continue
+        fi
+        files+=("$file")
+    done
+    if [ "${#files[@]}" -lt 1 ]; then
+        lf -remote "send $id echo no files to link files: ${files}"
+        exit 0
+    fi
+    # symbolically  copy mode is indicating a soft link
+    if [[ "$mode" == copy ]]; then
+        ln -sr $files -t .
+    # while a move mode is indicating a hard link
+    elif [[ "$mode" == move ]]; then
+        ln $files -t .
+    fi
+}}
+map P :Link
+
+# Copy yank to clipboard
+cmd yank-dirname ${{
+    dirname -- "$f" | tr -d '\n' | xclip -i -selection clipboard
+}}
+
+cmd yank-path ${{
+    echo "$fx" | xclip -i -selection clipboard
+}}
+
+cmd yank-basename ${{
+    echo "$fx" |
+      xargs -r -d '\n' basename -a -- |
+      xclip -i -selection clipboard
+}}
+
+cmd yank-basename-without-extension ${{
+    echo "$fx" |
+      xargs -r -d '\n' basename -a -- |
+      awk -e '{
+        for (i=length($0); i > 0; i--) {
+          if (substr($0, i, 1) == ".") {
+            if (i == 1) print $0
+            else print substr($0, 0, i-1)
+
+            break
+          }
+        }
+
+        if (i == 0)
+          print $0
+      }' | xclip -i -selection clipboard
+}}
