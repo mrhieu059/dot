@@ -1,7 +1,7 @@
 #!/bin/bash
 if pgrep -x redshift >/dev/null
 then
-	echo "ON "
+	echo "[  ON ]"
 else
-	echo "OFF "
+	echo "[  OFF ]"
 fi

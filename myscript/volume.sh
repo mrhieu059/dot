@@ -1,16 +1,5 @@
 #!/bin/sh
-checkSymlink=$(readlink /etc/asound.conf | cut -d "." -f2)
-if [ ${checkSymlink} = "s3" ]
-then
-	soundCard="1"
-	mixer="PCM"	
-else
-	soundCard="0"
-	mixer="Master"
-fi
+mute_Status=$(pulsemixer --get-mute | sed 's/0/ /')
+volume_Status=$(pulsemixer --get-volume | awk '{print $1}' )
+echo "[ $mute_Status : $volume_Status ]"
 
-case $1 in
-	'+') amixer sset -c0 Master,0 5%+ ;;
-	'-') amixer sset -c0 Master,0 5%- ;;
-	'mute') amixer sset -c${soundCard} ${mixer},0 toggle ;;
-esac

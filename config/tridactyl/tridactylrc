@@ -8,7 +8,9 @@ set update.checkintervalsecs 86400
 set theme shydactyl
 
 " Binds
-bind ;d composite get_current_url | yank | exclaim_quiet ~/.local/dot/myscript/getmp3.sh
+bind ;d composite get_current_url | yank | shellescape |exclaim_quiet ~/.local/dot/myscript/getmp3.sh
+" bind ;c composite get_current_url | yank | shellescape |exclaim_quiet ~/.local/dot/myscript/yt2mpv.sh
+bind ;c composite hint -y | shellescape |exclaim_quiet ~/.local/dot/myscript/yt2mpv.sh
 bind gnj tabopen https://github.com/tridactyl/tridactyl
 bind goj open https://github.com/tridactyl/tridactyl
 bind gwj winopen https://github.com/tridactyl/tridactyl

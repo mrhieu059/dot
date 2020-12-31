@@ -3,7 +3,9 @@
 if [ -e /usr/bin/light ]
 then
 	light=$(light -G | cut -d '.' -f1)
-	echo "$light "
+	echo "[ : $light ]"
 else
-	echo "NO "
+	light_Status=$(xbacklight | cut -d '.' -f1)
+	echo "[  : $light_Status ]"
+
 fi

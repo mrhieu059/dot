@@ -1,4 +1,4 @@
 -x
---audio-format mp3
+--audio-format best
 --audio-quality 0
 -o ~/.local/media/music/%(title)s.%(ext)s
