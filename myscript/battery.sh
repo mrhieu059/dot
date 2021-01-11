@@ -13,7 +13,7 @@ if [ -d '/sys/class/power_supply/BAT0' ];then
 	elif [ $status = "Discharging" -a  $battery -le 20 ];then
 		echo "[ $battery ] " 
 	else 
-		echo "[ $battery $status ]" | sed 's/Discharging/ /; s/Charging//; s/Full/ /; s/Unknown//'
+		echo "[ $battery $status ]" | sed 's/Discharging/ /; s/Charging//; s/Full/ /; s/Unknown//'
 	fi
 else
 	echo "[ AC ONLY ]" 

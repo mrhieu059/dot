@@ -2,8 +2,8 @@
 Type=Application
 Name=XTorrent
 GenericName=Torrent Downloader
-Exec=/home/cinux/.local/bin/toradd.sh %u%
-Icon=/home/cinux/.local/share/icons/nordvpn.png
+Exec=/home/cinux/.local/bin/toradd.sh %u
+#Icon=/home/cinux/.local/share/icons/nordvpn.png
 MimeType=application/x-bittorrent;x-scheme-handler/maget
 NoDisplay=true
 Terminal=false
